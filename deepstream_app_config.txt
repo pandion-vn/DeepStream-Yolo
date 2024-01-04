@@ -6,34 +6,16 @@ perf-measurement-interval-sec=5
 enable=1
 rows=1
 columns=1
-width=800
-height=600
+width=1280
+height=720
 gpu-id=0
 nvbuf-memory-type=0
 
-#[source0]
-#enable=1
-#type=3
-#uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
-#num-sources=1
-#gpu-id=0
-#cudadec-memtype=0
-
-#[sink0]
-#enable=1
-#type=2
-#sync=0
-#gpu-id=0
-#nvbuf-memory-type=0
-
 [source0]
 enable=1
-type=1
-camera-width=640
-camera-height=480
-camera-fps-n=30
-camera-fps-d=1
-camera-v4l2-dev-node=0
+type=3
+uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_720p.h264
+num-sources=1
 gpu-id=0
 cudadec-memtype=0
 
@@ -43,6 +25,24 @@ type=2
 sync=0
 gpu-id=0
 nvbuf-memory-type=0
+
+#[source0]
+#enable=1
+#type=1
+#camera-width=640
+#camera-height=480
+#camera-fps-n=30
+#camera-fps-d=1
+#camera-v4l2-dev-node=0
+#gpu-id=0
+#cudadec-memtype=0
+
+#[sink0]
+#enable=1
+#type=2
+#sync=0
+#gpu-id=0
+#nvbuf-memory-type=0
 
 [osd]
 enable=1
@@ -64,8 +64,8 @@ gpu-id=0
 live-source=0
 batch-size=1
 batched-push-timeout=40000
-width=800
-height=600
+width=1280
+height=720
 enable-padding=0
 nvbuf-memory-type=0
 
